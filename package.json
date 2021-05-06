@@ -1,0 +1,12 @@
+{
+  "name": "239-todos-backend-node",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "express": "~4.16.0",
+    "sqlite3": "^4.0.2"
+  }
+}

@@ -1,0 +1,344 @@
+@import url("reset.css");
+
+body {
+  font: normal 16px Helvetica, Arial, sans-serif;
+  color: #060606;
+  letter-spacing: 1px;
+  position: relative;
+}
+#sidebar {
+  width: 335px;
+  background: #464f77;
+  float:left;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 70px 0 100% 0;
+  margin-bottom: -100%;
+  box-sizing: border-box;
+}
+
+#sidebar_toggle {
+  display: none;
+}
+
+#sidebar header{
+  background: transparent url('../images/label.png') 0 7px no-repeat;
+  margin-left: 100px;
+  box-sizing: border-box;
+  padding-bottom: 10px;
+}
+#sidebar section.completed header{
+  background-image: url('../images/completed.png')
+}
+#sidebar header dl{
+  padding: 10px 0 5px 35px;
+}
+header dt, header dd{
+  display: inline-block;
+}
+#sidebar header dt{
+  font-size: 18px;
+  color: #ffffff;
+  margin-right: 60px;
+}
+
+#sidebar #completed_todos header dt {
+  font-size: 18px;
+  color: #ffffff;
+  margin-right: 48px;
+}
+#sidebar header dd{
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  width: 25px;
+  background-color: #6b7292;
+  border-radius: 35%;
+  padding: 0;
+  margin:0;
+  text-align: center;
+}
+#sidebar section{
+  padding-bottom: 40px;
+}
+#all_todos{
+  cursor: pointer;
+}
+#sidebar article dl {
+  margin-left: 60px;
+  padding-left: 75px;
+  cursor: pointer;
+}
+#sidebar article dt, article dd {
+  display: inline-block;
+  vertical-align: middle
+}
+#sidebar header.active{
+  background-color: #383f5f;
+  /*color: #ffffff;*/
+  margin-left: 0px;
+  background-position: 100px center;
+}
+#sidebar header.active dl{
+  /*background-color: #383f5f;*/
+  /*color: #ffffff;*/
+  margin-left: 100px;
+}
+#sidebar header.active dd{
+  background-color: #148fd5;
+  color: #ffffff;
+}
+#sidebar article dl.active {
+  background-color: #383f5f;
+  color: #ffffff;
+  margin-left: 0px;
+  padding-left: 135px;
+}
+#sidebar dl.active dd{
+  background-color: #148fd5;
+  color: #ffffff;
+}
+#sidebar article dd {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #6b7292;
+  border-radius: 100%;
+  padding: 0 3.5px;
+}
+#sidebar article dt {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin-right: 32px;
+  width: 110px;
+}
+#sidebar section.completed article dt{
+  text-decoration: line-through;
+}
+
+#items {
+  overflow: auto;
+  background: #ffffff;
+  padding: 20px 100px 0 20px;
+}
+
+#items img{
+  margin: 0 0 0 15px;
+}
+#items label[for="new_item"]{
+  background: none;
+  padding-left: 0;
+}
+#items header dl {
+  margin: 35px 0 0 15px;
+  padding: 0 0 40px 0;
+}
+#items header dl dt{
+  font-size: 21px;
+  color: #050505;
+}
+#items header dl dd{
+  background-color: #148fd5;
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 100%;
+  padding: 0 3px 0 4px;
+  margin-left: 20px;
+}
+#items main img{
+  padding-left: 0;
+  display: inline-block;
+}
+#items main h2{
+  color: #148fd5;
+  font-size: 16px;
+  font-weight: normal;
+  display: inline-block;
+  padding: 0 0 15px 10px;
+}
+#items table tr{
+  width: 100%;
+  border-top: 3px solid black;
+  padding: 15px 0;
+}
+#items table td{
+  width: 100%;
+  padding-left: 15px;
+}
+#items table td input[type="checkbox"]{
+  display: none;
+}
+#items table td {
+  border-top: 1px solid #e7e7e7;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+#items table td{
+  color: #060606;
+}
+#items table td.list_item:hover{
+  background-color: rgba(0,100,205, 0.2);
+}
+#items table tr td.delete{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#items table tbody tr td.delete img{
+  margin-left: 0;
+  text-align: center;
+}
+#items td.delete:hover{
+  background-color: rgba(255, 0, 0, 0.4);
+  cursor: pointer;
+}
+table td input[type="checkbox"]:hover{
+  cursor: normal;
+}
+table td input[type="checkbox"]:checked ~ label {
+  color: #b3b3b3;
+  text-decoration: line-through;
+}
+label {
+  cursor: pointer;
+  padding-left: 30px;
+}
+
+table .list_item {
+  position: relative;
+}
+
+table .list_item .check {
+  background: transparent url("../images/checkbox.png") no-repeat;
+  position: absolute;
+  top: 18px;
+  left: 15px;
+  height: 15px;
+  width: 15px;
+}
+
+table td input[type="checkbox"]:checked + .check {
+    background-image: url("../images/checked.png");
+}
+.delete img:hover{
+  cursor: pointer;
+}
+#items table td label:hover{
+  color: #148fd5;
+}
+#items table tr td:last-of-type{
+  text-align: right;
+  }
+form *{
+  background: none;
+  padding: 0;
+  font-size: 16px;
+  color: #757575;
+}
+form label{
+  float: left;
+  width: 110px;
+  padding-top: 12px;
+  padding-left: 30px;
+}
+form input, form textarea {
+  float: left;
+  width: 395px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #A6A6A6;
+  border-radius: 5px;
+}
+form{
+  padding-top: 40px;
+}
+form textarea{
+  resize: none;
+  height: auto;
+}
+form textarea:after{
+  display: block;
+  content: "";
+  clear: both;
+}
+.date {
+  float:left;
+  width: 400px;
+}
+.date input, .date select{
+  float: none;
+  width: 121px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.date select{
+  height: 43px;
+}
+form input[type="submit"], form button{
+  background-color: #148fd5;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+}
+form input[type="submit"]{
+  display: inline-block;
+  clear: both;
+  width: auto;
+  margin: 25px 20px 40px 140px;
+  padding: 10px 70px;
+}
+form button{
+  clear: both;
+  padding: 10px 20px;
+  margin: 25px 0 40px 0;
+}
+form li{
+  padding: 0 0 60px 0;
+  display: block;
+}
+form li:last-of-type{
+  padding-bottom: 0;
+}
+
+#items header img{
+  display: none;
+}
+#items header label{
+  background: none;
+}
+#items header input{
+  display: none;
+}
+
+input[type="checkbox"] + section {
+  display: none;
+}
+#form_modal{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -287.5px;
+  width: 575px;
+  background-color: #ffffff;
+  z-index: 2;
+}
+#modal_layer{
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+@media (max-width: 768px){
+  #items header img{
+    display: block;
+  }
+  #sidebar{
+    display: none;
+  }
+
+  #sidebar_toggle:checked + #sidebar{
+    display: block;
+  } 
+
+}

@@ -1,0 +1,11 @@
+{
+  "name": "239 Todos Backend",
+  "version": "0.0.0",
+  "description": "Todos Backend API Documentation",
+  "title": "Todos App",
+  "url": "/api",
+  "groups": ["Todo"],
+  "template": {
+    "withCompare": "false"
+  }
+}
